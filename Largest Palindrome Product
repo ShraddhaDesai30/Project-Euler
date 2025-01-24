@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int ans=0;
+  for(int i=100; i<=999;i++){
+      for(int j=100;j<=999;j++){
+          int curp=i*j;
+          string curPstring = to_string(curp);
+          string temp=curPstring;
+          reverse(curPstring.begin(),curPstring.end());
+          if(curPstring==temp and curp>ans){
+              ans=curp;
+          }
+    }
+  }
+  cout<<ans;
+    return 0;
+}
