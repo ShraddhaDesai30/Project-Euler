@@ -1,0 +1,15 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int ans=1;
+    while(true){
+        if(ans%11==0 and ans%12==0 and ans%13==0 and ans%14==0 and ans%15==0 and ans%16==0 and ans%17==0 and ans%18==0 and ans%19==0 and ans%20==0){
+            cout<<ans;
+            break;
+        }
+        else ans++;
+    }
+
+    return 0;
+}
