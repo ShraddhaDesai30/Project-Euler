@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    long long num=600851475143;
+  
+    long long largestprimefactor=0;
+    long long currentFactor=2;
+    while(num>1){
+        if(num%currentFactor ==0){
+            largestprimefactor=currentFactor;
+            num/=currentFactor;
+        }else{
+            currentFactor++;
+        }
+    }    
+    cout<<largestprimefactor;
+    return 0;
+}
