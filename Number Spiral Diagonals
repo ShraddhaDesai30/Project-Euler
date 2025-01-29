@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isperfectsquare(long long i) {
+    long long sqrtnum = sqrt(i);
+    return sqrtnum * sqrtnum == i;
+}
+
+int main() {
+    long long limit = 1001 * 1001;
+    long long iRate = 0;
+    long long ans = 0;
+    
+    for (long long i = 1; i <= limit; i += iRate) {
+        ans += i;
+        if (i % 2 == 1 && isperfectsquare(i)) {
+            iRate += 2;
+        }
+    }
+    
+    cout << ans;
+    return 0;
+}
